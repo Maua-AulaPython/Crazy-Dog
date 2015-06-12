@@ -1,0 +1,13 @@
+/device/new : POST
+{
+"Latidude" : 90,
+"Longitude" : 85
+}
+
+
+/measures/new : POST
+{
+"ID" : 1,
+"Luminosidade" : 0.8,
+"Temperatura" : 27
+}
