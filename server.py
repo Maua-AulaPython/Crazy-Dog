@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite://BancoDeDadosM.db'
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///BancoDeDadosM.db'
 app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
@@ -46,10 +46,9 @@ def estufa_new():
 		return jsonify({'status': False})
 	p = request.get_json()
 	d = Device()
-	d.id = p['ID']
 	d.latitude = p['Latitude']
 	d.longitude = p['Longitude']
-	db.session.add(a)
+	db.session.add(d)
 	db.session.commit()
 	return jsonify({'status': True})
 

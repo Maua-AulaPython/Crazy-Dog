@@ -12,7 +12,7 @@ class Device(db.Model):
 
     
 class Measure(db.Model):
-    id_device = db.Column(db.Integer, db.ForeignKey('Device.id'))
+    id_device = db.Column(db.Integer, db.ForeignKey('device.id'))
     luminosity = db.Column(db.Float)
     temperature = db.Column(db.Float)
     date = db.Column(db.DateTime, primary_key=True)
