@@ -19,7 +19,7 @@ def measure_list():
 	measures = []
 	for i in Measure.query.all():
 		print i.date, i.id_device,i.luminosity, i.temperature
-		measures.append({'Data': i.date, 'ID:':i.id_device, 'Luminosidade': i.luminosity, 'Temperatura': i.temperature})
+		measures.append({'Data': i.date.isoformat(), 'ID:':i.id_device, 'Luminosidade': i.luminosity, 'Temperatura': i.temperature})
 
 	return json.dumps(measures)
 
