@@ -1,0 +1,4 @@
+#Nota: 3.8
+#Comentario: Faltou o device
+             Faltou alguma protecao com os dados enviados pelo usuario (try/except)
+             Ponto positivo: documentacao
